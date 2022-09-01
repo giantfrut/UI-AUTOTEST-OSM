@@ -46,3 +46,5 @@ def base_page(driver):
 def directions_page(driver, base_page):
     base_page.go_to_directions_page()
     return DirectionsPage(driver=driver)
+
+

@@ -12,5 +12,5 @@ class DirectionsPage(BasePage):
         self.send_keys(self.locators.START_LOCATOR, route_from)
         self.send_keys(self.locators.FINISH_LOCATOR, route_to)
         self.click(self.locators.ROUTE_TYPE_LOCATOR)
-        self.click((self.locators.BIKE_OSRM_LOCATOR[0], self.locators.BIKE_OSRM_LOCATOR[1].format(type=route_types[route_type])))
+        self.click((self.locators.SELECT_TYPE_LOCATOR[0], self.locators.SELECT_TYPE_LOCATOR[1].format(type=route_types[route_type])))
         self.click(self.locators.GET_DIRECTIONS_BUTTON)

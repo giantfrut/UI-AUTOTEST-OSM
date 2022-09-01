@@ -10,7 +10,6 @@ CLICK_RETRY = 5
 
 class BasePage(object):
     locators = BasePageLocators()
-    BASE_URL = "https://www.openstreetmap.org/"
 
     def __init__(self, driver):
         self.driver = driver
