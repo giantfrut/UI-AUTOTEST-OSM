@@ -38,8 +38,8 @@ class BasePage(object):
         elem.clear()
         elem.send_keys(text)
 
-    def go_to_directions_page(self):
-        self.click(BasePageLocators.DIRECTIONS_LOCATOR)
+    def find_text(self, locator, timeout=None):
+        return self.wait(timeout).until(EC.visibility_of_element_located(locator)).text
 
-    def find_text(self, locator):
-        return self.wait(5).until(EC.visibility_of_element_located(locator)).text
+    def go_to_directions_page(self):
+        self.click(self.locators.DIRECTIONS_LOCATOR)
